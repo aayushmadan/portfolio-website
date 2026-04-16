@@ -265,7 +265,7 @@ function App() {
           <div className="glass-panel sidebar-panel !gap-6 ">
             <div className="sidebar-identity">
               <img
-                src="/profile-avatar.png"
+                src="./profile-avatar.png"
                 alt="Aayush Madan profile avatar"
                 className="sidebar-avatar"
               />
