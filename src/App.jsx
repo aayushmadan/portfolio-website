@@ -242,7 +242,7 @@ function App() {
       <div className="site-glow site-glow-left" />
       <div className="site-glow site-glow-right" />
 
-      <a className="resume-link" href="https://docs.google.com/document/d/e/2PACX-1vQBRfsMSTgTkvb5StanqA9wM0GEF_YBEAaYIknTeAcglLxt_h4vDbOzoP0BZ6emyY76LHtNnwDXA-5F/pub" target="_blank" rel="noreferrer">
+      <a className="resume-link" href="https://drive.google.com/file/d/1a9ferbo7_dgowiBsBGu_IuzoetQRKt6I/view?usp=sharing" target="_blank" rel="noreferrer">
         View Resume
         <ArrowUpRight size={16} />
       </a>
