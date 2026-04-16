@@ -12,6 +12,10 @@ permissions:
 jobs:
     build:
         runs-on: ubuntu-latest
+        env:
+            VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+            VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+            VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
         steps:
             - name: Checkout code
               uses: actions/checkout@v6
@@ -38,10 +42,7 @@ jobs:
         environment: 
             name: github-pages
             url: ${{ steps.deployment.outputs.page_url }}
-        env:
-            VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
-            VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
-            VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
+        
         steps:
             - name: Setup GitHub Pages
               uses: actions/configure-pages@v4

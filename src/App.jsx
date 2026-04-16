@@ -198,7 +198,9 @@ function App() {
       setStatus({
         type: 'error',
         message:
-          'Add your EmailJS keys in the environment variables to activate the contact form.',
+          // 'Add your EmailJS keys in the environment variables to activate the contact form.',
+          'Something went wrong while sending the message. Please try again.',
+
       })
       return
     }
