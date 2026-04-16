@@ -1,0 +1,50 @@
+name: portfolio-website
+
+on:
+    push:
+        branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v6
+            
+            - name: Setup Nodejs
+              uses: actions/setup-node@v6
+              with:
+                node-version: '22'
+            
+            - name: Install node modules
+              run: npm install
+
+            - name: Build
+              run: npm run build
+
+            - name: Upload Static Files
+              uses: actions/upload-pages-artifact@v4
+              with:
+                path: ./dist
+        
+    deploy:
+        runs-on: ubuntu-latest
+        environment: 
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        env:
+            VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+            VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+            VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
+        steps:
+            - name: Setup GitHub Pages
+              uses: actions/configure-pages@v4
+
+            - name: Deployment
+              id: deployment
+              uses: actions/deploy-pages@v4
