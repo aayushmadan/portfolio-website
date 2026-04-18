@@ -128,6 +128,7 @@ const projects = [
   {
     title: 'End-to-End DevSecOps CI/CD Pipeline',
     duration: 'February 2026 - March 2026',
+    href: 'https://github.com/aayush-madan/ai-chat-app',
     stack: [
       { name: 'GitHub Actions', icon: SiGithubactions },
       { name: 'Docker', icon: SiDocker },
@@ -144,6 +145,7 @@ const projects = [
   {
     title: 'Multi-Tier Web Application Deployment',
     duration: 'March 2026 - April 2026',
+    href: 'https://github.com/aayush-madan/AI-Bank-App',
     stack: [
       { name: 'Docker', icon: SiDocker },
       { name: 'Kubernetes', icon: SiKubernetes },
@@ -385,14 +387,15 @@ function App() {
             <SectionHeading title="Projects" />
             <div className="grid gap-4 xl:grid-cols-2">
               {projects.map((project, index) => (
-                <article key={project.title} className="content-card project-card">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <span className="project-index-tag">Project {index + 1}</span>
-                      <h3 className="text-[1.2rem] font-semibold">{project.title}</h3>
-                      <p className="mt-2 text-sm text-neutral-500">{project.duration}</p>
+                <a key={project.title} href={project.href} target="_blank" rel="noreferrer">
+                  <article className="content-card project-card">
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <span className="project-index-tag">Project {index + 1}</span>
+                        <h3 className="text-[1.2rem] font-semibold">{project.title}</h3>
+                        <p className="mt-2 text-sm text-neutral-500">{project.duration}</p>
+                      </div>
                     </div>
-                  </div>
 
                   <div className="mt-5 !text-xs flex flex-wrap gap-3">
                     {project.stack.map(({ name }) => (
@@ -410,7 +413,8 @@ function App() {
                       </div>
                     ))}
                   </div>
-                </article>
+                  </article>
+                </a>
               ))}
             </div>
           </section>
