@@ -14,6 +14,7 @@ Link to website: https://aayushmadan.github.io/portfolio-website/
 
 ### Frontend
 - React 18
+- Vite
 - TailwindCSS
 
 ### Libraries & Tools
