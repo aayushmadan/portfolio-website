@@ -22,7 +22,38 @@ Link to website: https://aayushmadan.github.io/portfolio-website/
 - React Icons
 - EmailJS
 
-## 📋 Sections
+## 🔄 CI/CD Pipeline & Automated Deployment
+
+This portfolio is deployed on **GitHub Pages** with a fully automated CI/CD pipeline using **GitHub Actions**.
+
+### Deployment Overview
+- **Hosting**: GitHub Pages
+- **Automation**: GitHub Actions
+- **Trigger**: Automatic deployment on every push to `main` branch
+- **Live Site**: https://aayushmadan.github.io/portfolio-website/
+
+### Automated Workflow
+The `.github/workflows/deploy.yml` orchestrates a two-stage pipeline:
+
+**Build Stage**
+- Checkout repository code
+- Setup Node.js environment (v22)
+- Install dependencies via npm
+- Compile React app with Vite
+- Generate optimized production bundle
+- Upload dist folder as GitHub Pages artifact
+
+**Deployment Stage**
+- Configure GitHub Pages environment
+- Deploy artifact to GitHub Pages hosting
+- Generate and output live URL
+
+### Security & Configuration
+- EmailJS credentials stored as GitHub Secrets
+- Resume link managed as GitHub Variables
+- Minimal permissions scope (read contents, write pages, id-token)
+
+## �📋 Sections
 
 - Profile
 - Education
