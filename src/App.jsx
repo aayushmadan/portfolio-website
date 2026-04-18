@@ -31,12 +31,8 @@ const profile = {
   role: 'DevOps Engineer',
   intro:
     'Building scalable, reliable systems through automation and continuous delivery.',
-  summary:
-    'DevOps Engineer with hands-on experience in Docker, Kubernetes, AWS, and scalable CI/CD pipelines. Focused on cloud deployment, automation, and secure application delivery.',
   phone: '+91-9555504611',
   email: 'aayush.madan4611@gmail.com',
-  location: 'Noida, Uttar Pradesh, India',
-  github: 'https://github.com/aayushmadan',
   linkedin: 'http://www.linkedin.com/in/aayush-madan-878a68226',
 }
 
@@ -242,7 +238,7 @@ function App() {
       <div className="site-glow site-glow-left" />
       <div className="site-glow site-glow-right" />
 
-      <a className="resume-link" href={import.meta.env.RESUMELINK} target="_blank" rel="noreferrer">
+      <a className="resume-link" href={import.meta.env.VITE_RESUMELINK} target="_blank" rel="noreferrer">
         View Resume
         <ArrowUpRight size={16} />
       </a>
