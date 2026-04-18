@@ -121,9 +121,9 @@ const experience = [
     location: 'Remote',
     duration: 'December 2024 - May 2025',
     points: [
-      'Containerized and deployed 4+ web applications using Docker on cloud platforms, reducing environment setup time by 40% and making releases more consistent.',
-      'Standardized runtime environments across development and production to improve reliability, onboarding, and deployment confidence.',
-      'Strengthened security for 2-tier web applications by moving sensitive configuration into Google Secret Manager and securing 5+ API keys, removing hardcoded credentials completely.',
+      'Containerized and deployed 4+ web applications using Docker and hosting on cloud platforms, ensuring consistent deployments and reducing environment setup time by 40%.',
+      'Standardized the runtime environments using Docker, improving consistency in development & production environments.',
+      'Strengthened application security for 2-Tier web applications by migrating sensitive configurations to Google Secret Manager and secured 5+ API keys , eliminating 100% of hardcoded credentials, reducing risk of credential exposure.',
     ],
   },
 ]
@@ -140,9 +140,9 @@ const projects = [
       { name: 'Flask', icon: SiFlask },
     ],
     points: [
-      'Engineered an end-to-end CI/CD pipeline for a Flask application with GitHub Actions, Docker, and AWS to automate build, test, and deployment workflows.',
-      'Integrated DevSecOps checks including SAST, secret scanning, software composition analysis, and container image scanning for a secure release flow.',
-      'Automated deployment to an AWS EC2 instance through shell scripting, making delivery repeatable and production-ready.',
+      'Engineered an end-to-end CI/CD pipeline using GitHub Actions, Docker, AWS automating the build, testing and deployment workflows for a Flask Application.',
+      'Engineered an end-to-end CI/CD pipeline using GitHub Actions, Docker, AWS automating the build, testing and deployment workflows for a Flask Application.',
+      'Implemented DevSecOps security practices using SAST, Secrets Scanning, Software Composition Analysis and Container Image Scanning and automated the deployment workflows to a self hosted EC2 runner using Shell Scripting, ensuring secure and continuous delivery.',
     ],
   },
   {
@@ -242,7 +242,7 @@ function App() {
       <div className="site-glow site-glow-left" />
       <div className="site-glow site-glow-right" />
 
-      <a className="resume-link" href="https://drive.google.com/file/d/1a9ferbo7_dgowiBsBGu_IuzoetQRKt6I/view?usp=sharing" target="_blank" rel="noreferrer">
+      <a className="resume-link" href={import.meta.env.RESUMELINK} target="_blank" rel="noreferrer">
         View Resume
         <ArrowUpRight size={16} />
       </a>
