@@ -128,7 +128,7 @@ const projects = [
   {
     title: 'End-to-End DevSecOps CI/CD Pipeline',
     duration: 'February 2026 - March 2026',
-    href: 'https://github.com/aayush-madan/ai-chat-app',
+    href: 'https://github.com/aayushmadan/ai-chat-app',
     stack: [
       { name: 'GitHub Actions', icon: SiGithubactions },
       { name: 'Docker', icon: SiDocker },
@@ -145,7 +145,7 @@ const projects = [
   {
     title: 'Multi-Tier Web Application Deployment',
     duration: 'March 2026 - April 2026',
-    href: 'https://github.com/aayush-madan/AI-Bank-App',
+    href: 'https://github.com/aayushmadan/AI-BankApp-DevOps',
     stack: [
       { name: 'Docker', icon: SiDocker },
       { name: 'Kubernetes', icon: SiKubernetes },
@@ -387,15 +387,24 @@ function App() {
             <SectionHeading title="Projects" />
             <div className="grid gap-4 xl:grid-cols-2">
               {projects.map((project, index) => (
-                <a key={project.title} href={project.href} target="_blank" rel="noreferrer">
-                  <article className="content-card project-card">
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <span className="project-index-tag">Project {index + 1}</span>
-                        <h3 className="text-[1.2rem] font-semibold">{project.title}</h3>
-                        <p className="mt-2 text-sm text-neutral-500">{project.duration}</p>
-                      </div>
-                    </div>
+                <article key={project.title} className="content-card project-card">
+                  <div className="flex items-start justify-between gap-4 mb-2">
+                    <span className="project-index-tag">Project {index + 1}</span>
+                    <a 
+                      href={project.href} 
+                      target="_blank" 
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[0.75rem] font-medium text-neutral-950 border border-neutral-200 bg-white hover:bg-neutral-50 transition-all duration-200 hover:-translate-y-0.5"
+                    >
+                      View Repository
+                      <ArrowUpRight size={14} />
+                    </a>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-[1.2rem] font-semibold">{project.title}</h3>
+                    <p className="mt-2 text-sm text-neutral-500">{project.duration}</p>
+                  </div>
 
                   <div className="mt-5 !text-xs flex flex-wrap gap-3">
                     {project.stack.map(({ name }) => (
@@ -413,8 +422,7 @@ function App() {
                       </div>
                     ))}
                   </div>
-                  </article>
-                </a>
+                </article>
               ))}
             </div>
           </section>
