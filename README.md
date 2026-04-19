@@ -64,4 +64,4 @@ The `.github/workflows/deploy.yml` orchestrates a two-stage pipeline:
 ---
 **Aayush Madan**
 - **Email**: aayush.madan4611@gmail.com
-- **LinkedIn**: [http://www.linkedin.com/in/aayush-madan-878a68226](http://www.linkedin.com/in/aayush-madan-878a68226)
+- **LinkedIn**: [http://www.linkedin.com/in/aayush-madan-878a68226](http://www.linkedin.com/in/aayush-madan-devops)
