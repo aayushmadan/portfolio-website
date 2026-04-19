@@ -33,7 +33,7 @@ const profile = {
     'Building scalable, reliable systems through automation and continuous delivery.',
   phone: '+91-9555504611',
   email: 'aayush.madan4611@gmail.com',
-  linkedin: 'http://www.linkedin.com/in/aayush-madan-878a68226',
+  linkedin: 'http://www.linkedin.com/in/aayush-madan-devops',
 }
 
 const navigation = [
@@ -165,7 +165,7 @@ const projects = [
 const contactCards = [
   { label: 'Phone', value: profile.phone, href: `tel:${profile.phone}`, icon: Phone },
   { label: 'Email', value: profile.email, href: `mailto:${profile.email}`, icon: Mail },
-  { label: 'LinkedIn', value: 'aayush-madan-878a68226', href: profile.linkedin, icon: Linkedin },
+  { label: 'LinkedIn', value: 'aayush-madan-devops', href: profile.linkedin, icon: Linkedin },
 ]
 
 const emailJsConfig = {
