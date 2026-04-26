@@ -138,7 +138,6 @@ const projects = [
     ],
     points: [
       'Engineered an end-to-end CI/CD pipeline using GitHub Actions, Docker, AWS automating the build, testing and deployment workflows for a Flask Application.',
-      'Engineered an end-to-end CI/CD pipeline using GitHub Actions, Docker, AWS automating the build, testing and deployment workflows for a Flask Application.',
       'Implemented DevSecOps security practices using SAST, Secrets Scanning, Software Composition Analysis and Container Image Scanning and automated the deployment workflows to a self hosted EC2 runner using Shell Scripting, ensuring secure and continuous delivery.',
     ],
   },
@@ -155,9 +154,8 @@ const projects = [
     
     ],
     points: [
-      'Containerized and deployed a multi-tier application on Kubernetes, combining Spring Boot, MySQL, and Ollama into a scalable platform.',
-      'Added health probes and self-healing behavior to improve runtime stability and reduce operational friction.',
-      'Used Horizontal Pod Autoscaling to dynamically scale workloads and maintain stable performance under changing traffic demands.',
+      'Containerized and Deployed a multi-tier application (Spring Boot, MySQL, Ollama) on Kubernetes, enabling scalability and self healing.',
+      'Improved system reliability and scalability by incorporating health probes for runtime failure detection, and HPA to dynamically scale the workloads, ensuring consistent performance under varying demands.',
     ],
   },
 ]
